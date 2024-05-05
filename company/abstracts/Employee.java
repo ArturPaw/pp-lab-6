@@ -1,8 +1,9 @@
+
 package company.abstracts;
 
 import company.interfaces.Employable;
-public abstract class Employee implements Employable {
 
+public abstract class Employee implements Employable {
     private String name;
     private double salary;
     private int id;
@@ -23,10 +24,6 @@ public abstract class Employee implements Employable {
 
     public double getSalary() {
         return salary;
-    }
-
-    public int getId() {
-        return id;
     }
 
     public String getHireDate() {
@@ -50,8 +47,7 @@ public abstract class Employee implements Employable {
         if (obj == null || getClass() != obj.getClass()) {
             return false;
         }
-        Employee other = (Employee) obj;
-        return id == other.id;
+        Employee employee = (Employee) obj;
+        return id == employee.id;
     }
 }
-
